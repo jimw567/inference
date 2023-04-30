@@ -1,7 +1,7 @@
 torch 
 torchvision
 scikit-learn
-numpy
+numpy==1.21.6
 pydot
 torchviz
 protobuf
@@ -10,3 +10,5 @@ onnxruntime
 onnx
 opencv-python
 mlperf_logging @ git+https://github.com/mlperf/logging.git@2.1.0
+tensorboard
+

@@ -1,9 +1,15 @@
+if [ $# -lt 1 ]; then
+    echo "usage: source setup.sh dataset"
+    echo "  dataset: kaggle|criteo"
+    return 1
+fi
+
 dataset=$1
 
 export DLRM_DIR=$(realpath $PWD/../../../../training/recommendation/dlrm/)
 echo "DLRM_DIR=$DLRM_DIR"
 
-export MODEL_DIR=$(realpath $PWD/../../model)
+export MODEL_DIR=/proj/gdba/models/mlcommons/dlrm
 echo "MODEL_DIR=$MODEL_DIR"
 
 export DATA_DIR=/proj/gdba/models/mlcommons/dlrm/$dataset
